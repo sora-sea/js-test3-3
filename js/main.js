@@ -10,6 +10,13 @@
     const statusBtn = document.createElement('button');
     statusBtn.textContent = '作業中';
     task.appendChild(statusBtn);
+    statusBtn.addEventListener('click', () => {
+      if (statusBtn.textContent === '作業中') {
+        statusBtn.textContent = '完了';
+      } else {
+        statusBtn.textContent ='作業中';
+      }
+    });
   };
   
   const createDeleteBtn = (task, index) => {
